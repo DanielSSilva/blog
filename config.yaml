@@ -1,0 +1,50 @@
+baseURL: blog.danielssilva.dev
+languageCode: en-us
+title: Daniel Silva's blog
+theme: mini
+paginate: 3
+
+# # !!! exampleSite only, you may need to delete the line: `themesDir: ../../` 
+# themesDir: ../../
+
+#hasCJKLanguage: true
+permalinks:
+  posts: /posts/:title/
+
+googleAnalytics: UA-136825774-1
+disqusShortname: DanielSSilva
+
+
+markup:
+  highlight:
+    guessSyntax: true
+    style: emacs
+  goldmark:
+    renderer:
+      unsafe: true
+
+
+social:
+  github: https://github.com/DanielSSilva
+  twitter: https://github.com/DanielSilv9
+
+
+params:
+  author: Daniel Silva
+  bio: DevOps Engineer
+  #description: My Blog
+  enableRSS: false
+  enableComments: true
+  enableGoogleAnalytics: true
+  showPowerBy: false
+  # links:
+  #   - name: About
+  #     path: www.danielssilva.dev
+
+  # Posts:
+  #   - PowerShell: "https://danielssilva.dev/tags/#PowerShell"
+  #   - RaspberryPi: "https://danielssilva.dev/tags/#RaspberryPi"
+  #   - SQL Server: "https://danielssilva.dev/tags/#SQL%20Server"
+  #   - Docker: "https://danielssilva.dev/tags/#Docker"
+  # References: "references"
+  # About: "about"
