@@ -29,6 +29,7 @@ social:
   twitter: https://twitter.com/DanielSilv9
 
 params:
+  twitter: DanielSilv9
   author: Daniel Silva
   bio: DevOps Engineer
   #description: My Blog
@@ -36,6 +37,7 @@ params:
   enableComments: true
   enableGoogleAnalytics: true
   showPowerBy: false
+  featured_image: /img/coast.jpeg
   # links:
   #   - name: About
   #     path: www.danielssilva.dev
