@@ -5,6 +5,7 @@ tags:
 - DevOps
 - Linux
 title: A (very) small introduction to Ansible
+GHissueID: 8
 ---
 
 While I was writing for my second part of "Using RaspberryPi as an Azure agent for Pipelines" (you can see the part 1 [here](https://danielssilva.dev/2020-09-28-Using-Raspberry-Pi-as-an-Azure-Agent-for-Pipelines/)) I came across a tedious scenario: I needed to connect to different machines, download some software and perform some configurations, all using the terminal.

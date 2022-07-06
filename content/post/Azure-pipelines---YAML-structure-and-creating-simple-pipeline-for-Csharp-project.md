@@ -1,11 +1,12 @@
 ---
 comments: true
-date: "2021-07-10T00:00:00Z"
+date: "2021-07-10T01:00:00Z"
 subtitle: Deploy faster, with more quality and confidence
 tags:
 - Azure Pipelines
 - DevOps
 title: Azure pipelines - YAML structure and creating simple pipeline for C# project
+GHissueID: 11
 ---
 
 Azure pipelines can be created through a GUI or through a YAML file.

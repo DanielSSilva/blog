@@ -6,6 +6,7 @@ tags:
 - SQL Server
 title: Docker/SQL - MODIFY FILE encountered operating system error 31(A device attached
   to the system is not functioning.) while attempting to expand the physical file
+GHissueID: 3
 ---
 
 I use a Mac as my development machine. As you might or might not now, SQL Server is not available for macOS. Instead, you need to use docker and have a container to hold your instance.

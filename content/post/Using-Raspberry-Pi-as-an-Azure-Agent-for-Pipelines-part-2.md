@@ -7,6 +7,7 @@ tags:
 - DevOps
 - Azure
 title: Using RaspberryPi as an Azure agent for Pipelines (Part 2)
+GHissueID: 9
 ---
 
 In the [first part](https://danielssilva.dev/2020-09-28-Using-Raspberry-Pi-as-an-Azure-Agent-for-Pipelines/) of this series, we have seen how we can setup a self hosted agent (in this case on a Raspberry Pi).

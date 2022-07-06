@@ -6,6 +6,7 @@ tags:
 - PowerShell
 - RaspberryPi
 title: Remote Sessions and notifications
+GHissueID: 2
 ---
 
 [On my last post]({{< ref "/post/Getting-Started-with-PowerShell-(Core)-on-Raspbian-(RaspberryPi)">}}), in the very end, I showed you an example of something quite simple that you could do with PowerShell on the RaspberryPi: Show a notification when a LED is left ON.

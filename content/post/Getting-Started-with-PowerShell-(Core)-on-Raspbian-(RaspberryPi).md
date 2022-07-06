@@ -6,6 +6,7 @@ tags:
 - PowerShell
 - RaspberryPi
 title: Getting started with PowerShell (Core) on Raspbian (RaspberryPi)
+GHissueID: 1
 ---
 
 Around a year ago, I started to investigate about new usages for my Raspberry Pi 3b . I love the Raspberry, a tiny, credit-card-sized SBC capable of running different operating systems, but most of the projects I found that seemed interesting were highly complex (or at least seemed) and used python, a language that I'm not familiar with. Around the same time, I also started to hear a lot about PowerShell (or maybe it caught my attention because I've started to use it at my work for simple stuff), as a scripting language mainly used (as far as I knew) to automate tasks.

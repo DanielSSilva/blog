@@ -5,6 +5,7 @@ tags:
 - PowerShell
 - SQL
 title: Automating database backups with Universal Automation and dbatools
+GHissueID: 6
 ---
 
 I've recently read about [Universal Automation (UA)](https://ironmansoftware.com/universal-automation/), by [Ironman Software](https://ironmansoftware.com/).

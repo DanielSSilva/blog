@@ -6,6 +6,7 @@ tags:
 - Azure Pipelines
 - DevOps
 title: Azure pipelines - Adding code coverage and reports to the pipeline
+GHissueID: 12
 ---
 
 In the [previous post]({{< ref "/post/Azure-pipelines---YAML-structure-and-creating-simple-pipeline-for-Csharp-project" >}}), we've created a simple pipeline that builds and tests our application.

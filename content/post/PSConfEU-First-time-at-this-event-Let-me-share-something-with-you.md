@@ -5,6 +5,7 @@ subtitle: null
 tags:
 - PowerShell
 title: PSConfEU - First time at this event? Let me share something with you
+GHissueID: 4
 ---
 
 [PSConfEU](https://psconf.eu/) is the ["Europe’s largest PowerShell-themed annual conference!"](https://psconf.eu/about.html).

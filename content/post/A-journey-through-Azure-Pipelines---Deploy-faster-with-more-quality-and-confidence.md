@@ -6,9 +6,10 @@ tags:
 - Azure Pipelines
 - DevOps
 title: A journey through (Azure) Pipelines
+GHissueID: 10
 ---
 
-UPDATE: This "Journey" will be on pause, as I've switched positions and I currently don't actively work with Azure Pipelines.
+## ***UPDATE: This "Journey" is on pause, as I've switched positions and I currently don't actively work with Azure Pipelines.***
 
 As a first and most broad idea of what a pipeline is, I like to think of it as the filler between developing and delivering your software. A "piece" that aggregates and performs every necessary action/procedure (or at least most of them) to take your code up to the final product (an app, a library, a website, you name it).
 The most amazing part is that it can be as simple as performing a build to ensure that your code compiles, and grow as your needs, ending up being something like:

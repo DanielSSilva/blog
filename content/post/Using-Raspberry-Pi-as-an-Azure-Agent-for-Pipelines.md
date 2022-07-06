@@ -6,6 +6,7 @@ tags:
 - DevOps
 - Azure
 title: Using RaspberryPi as an Azure agent for Pipelines (Part 1)
+GHissueID: 7
 ---
 
 I've recently switched to a DevOps role in a new company.

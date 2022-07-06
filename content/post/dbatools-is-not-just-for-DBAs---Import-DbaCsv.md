@@ -6,6 +6,7 @@ tags:
 - SQL
 - PowerShell
 title: dbatools is not just for DBAs - Import-DbaCsv
+GHissueID: 5
 ---
 
 The first time I've heard about [dbatools](https://dbatools.io/) was on its early stages and, although it seemed really interesting, I didn't know anything about PowerShell, nor I had to work with SQL professionally. 
