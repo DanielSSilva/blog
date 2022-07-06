@@ -12,7 +12,6 @@ permalinks:
   posts: /posts/:title/
 
 googleAnalytics: UA-136825774-1
-disqusShortname: DanielSSilva
 
 
 markup:
