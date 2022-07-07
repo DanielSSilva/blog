@@ -16,7 +16,7 @@
     <meta property="og:description" content="{{ if .IsHome }}{{ .Description }}{{ else }}{{ htmlEscape .Summary }}{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
-    {{ if .Params.featured_image }}
+    {{ if .Site.Params.featured_image }}
       <meta property="og:image" content="{{ .Site.Params.featured_image }}">
       <meta property="og:image:secure_url" content="{{ .Site.Params.featured_image }}">
     {{- end }}
