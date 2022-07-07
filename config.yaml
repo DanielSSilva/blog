@@ -36,7 +36,7 @@ params:
   enableComments: true
   enableGoogleAnalytics: true
   showPowerBy: false
-  featured_image: /img/coast.jpeg
+  featured_image: /img/background.png
   # links:
   #   - name: About
   #     path: www.danielssilva.dev
