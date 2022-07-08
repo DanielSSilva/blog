@@ -25,10 +25,10 @@
     <meta property="og:type" content="website">
     <!-- <meta property="og:description" content="{{ if .IsHome }}{{ .Description }}{{ else }}{{ htmlEscape .Summary }}{{ end }}"> -->
     <meta name=twitter:creator content="@DanielSilv9">
-    <meta name=twitter:title content="SQL Server builds, powered by dbatools">
+    <meta name=twitter:title content="Daniel Silva's blog">
     <meta property="twitter:site" content="@DanielSilv9" />
 
-    <meta property="og:url" content="https://dbatools.io/builds">
+    <meta property="og:url" content="{{ .Permalink }}">
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}">
     <!-- <meta property="og:description" content="Covers SQL Server 2000-2022"> -->
     <meta property="og:image" content="https://blog.danielssilva.dev/img/coast.jpeg">
