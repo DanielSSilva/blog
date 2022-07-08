@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.LanguageCode | default "en" }}">
   <head>
-    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}">
+    <!-- <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}">
     <meta name="twitter:image" content="https://blog.danielssilva.dev/img/coast.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name=twitter:creator content="@DanielSilv9">
     <meta property="twitter:site" content="@DanielSilv9" />
-
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <!-- <meta property="og:description" content="{{ if .IsHome }}{{ .Description }}{{ else }}{{ htmlEscape .Summary }}{{ end }}"> -->
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
-    <!-- <meta property="og:description" content="Covers SQL Server 2000-2022"> -->
-    <meta property="og:image" content="https://blog.danielssilva.dev/img/coast.png">
+    <meta property="og:image" content="https://blog.danielssilva.dev/img/coast.png"> -->
 
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-
+    <!-- <meta property="og:description" content="Covers SQL Server 2000-2022"> -->
+    <!-- <meta property="og:description" content="{{ if .IsHome }}{{ .Description }}{{ else }}{{ htmlEscape .Summary }}{{ end }}"> -->
     {{ partial "head.html" . }}
 
   </head>
