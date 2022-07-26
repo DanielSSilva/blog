@@ -94,5 +94,3 @@ git config --global url."https://gitlab.ourinstancename.com/".insteadOf "git@git
 ```
 
 Thanks for reading this, and I hope that this was useful!
-
-If you want to comment this post, you can leave a comment on [this issue](https://github.com/DanielSSilva/blog/issues/13)
