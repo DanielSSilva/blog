@@ -1,7 +1,6 @@
 ---
 title: "Gitlab private instance and private Terraform modules"
 date: "2022-07-26T00:00:00Z"
-draft: true
 tags:
 - DevOps
 - Terraform
