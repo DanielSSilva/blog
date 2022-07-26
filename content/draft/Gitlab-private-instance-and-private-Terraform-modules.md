@@ -9,12 +9,12 @@ comments: true
 GHissueID: 13
 ---
 
-At my current job, we use a private instance of Gitlab to host the code, CI/CD, and such as well as private runners. 
+At my current job, we use a private instance of Gitlab to host the code, CI/CD, and such, and we also have private runners.
 I recently began working on a terraform script that became a module since multiple teams/projects can leverage such implementation. For this reason, it makes sense to have a repository dedicated to this module (or even more modules, but that can be another topic).
 
 ## The objective
 
-The idea is pretty simple: Have a git repository that hosts the module(s), and every other project that wants to use the module, reference the repository through the `source = "git:: (...)` syntax.
+The idea is pretty simple: Have a git repository that hosts the module(s), and every other project that wants to use the them, reference the repository through the `source = "git:: (...)` terraform syntax.
 
 ## Using terraform modules
 I love Terraform documentation, since it's really well written, has examples and is very detailed. On [this](https://www.terraform.io/language/modules/sources#module-sources) page, they have examples on how to use modules with different sources. Without going into much details [here](https://www.terraform.io/language/modules/sources#generic-git-repository) is what we are looking for:
@@ -29,7 +29,7 @@ module "storage" {
 ```
 
 ## The issue
-Because the module is hosted on a private instance of Gitlab, we need some sort of authentication in order to be able to fetch the code. For a local setup, I've generated SSH keys and it works perfectly, but for the CI/CD pipeline it's not optimal.
+Because the module is hosted on a private instance of Gitlab, we need some sort of authentication in order to be able to fetch the code. For a local setup, I've generated SSH keys and it works perfectly, but for the CI/CD pipeline I haven't figured how to achieve that.
 
 ## The CI_JOB_TOKEN predefined variable
 [CI_JOB_TOKEN](https://docs.gitlab.com/ee/ci/jobs/ci_job_token.html) is a predefined variable that gets populated whenever a pipeline job is about to run and serves as an access token. 
@@ -59,7 +59,7 @@ Here's what it's doing:
 
 ## Adding these configs to the pipeline
 Because between stages the runner might change, we need to run `terraform init` on every stage to ensure we have everything set up, including the modules.
-We can use the `default`  YAML element to specify what should run before every job, and include these configurations there. Here's an example:
+We can use the `default` YAML element to specify what should run before every job, and include these configurations there. Here's an example:
 
 ```YAML
 default:
