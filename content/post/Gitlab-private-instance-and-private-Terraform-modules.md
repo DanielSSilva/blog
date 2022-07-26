@@ -52,9 +52,9 @@ git config --global url."https://gitlab.ourinstancename.com/".insteadOf "git@git
 ```
 
 Here's what it's doing:
-	1. Configure a credential helper to store our credentials - I've tried with `cache` instead of `store` but it didn't work
-	2. store the username (`gitlab-ci-token` ) and access token (`${CI_JOB_TOKEN}`)
-	3. Replace the `git@` syntax with HTTPS, in order to use the user:accessToken
+1. Configure a credential helper to store our credentials - I've tried with `cache` instead of `store` but it didn't work
+1. store the username (`gitlab-ci-token` ) and access token (`${CI_JOB_TOKEN}`)
+1. Replace the `git@` syntax with HTTPS, in order to use the user:accessToken
 
 ## Adding these configs to the pipeline
 Because between stages the runner might change, we need to run `terraform init` on every stage to ensure we have everything set up, including the modules.
