@@ -2,6 +2,7 @@
 title: "How I've revamped my domain - Part one: From Jekyll to Hugo"
 #title: Taking full advantage of my domain - Personal Page + Blog
 date: "2022-07-07T00:00:00Z"
+draft: true
 tags:
 - Personal
 - Blog
