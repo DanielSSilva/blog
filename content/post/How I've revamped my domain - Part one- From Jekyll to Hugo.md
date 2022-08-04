@@ -1,13 +1,12 @@
 ---
 title: "How I've revamped my domain - Part one: From Jekyll to Hugo"
 #title: Taking full advantage of my domain - Personal Page + Blog
-date: "2022-07-07T00:00:00Z"
-draft: true
+date: "2022-08-04T00:00:00Z"
 tags:
 - Personal
 - Blog
 comments: true
-GHissueID: 10
+GHissueID: 14
 ---
 
 # A small introduction
@@ -17,11 +16,11 @@ It was a really simple and nice way to get started with blogging.
 As time passed and I kept on writing posts, I noticed that I enjoyed it.
 For that reason, it seemed reasonable to invest in a custom domain, and in that way also enrich my online presence.
 
-## Custom domain choice
+### Custom domain choice
 When I decided to "upgrade" to a custom domain, the `.dev` domains had just become available, and since this is a technical blog and I'm a dev... perfect opportunity.
 I've ended with [Namecheap](https://www.namecheap.com/) because as far as I remember, at the time there were a lot of complaints about GoDaddy (not that NameCheap is perfect...) and Namecheap had the domain that I wanted at a small price.
 
-## WordPress vs GitHub Pages
+### WordPress vs GitHub Pages
 As I've mentioned, WordPress worked just fine for the needs that I had, but since I wanted to upgrade to a custom domain, it involved upgrading the WordPress account or hosting WordPress on the domain itself.
 Namecheap offers WordPress hosting, but it increases costs.
 This is where GitHub Pages comes in, and it's the main reason I've moved to it.
@@ -33,7 +32,7 @@ Additionally, as mentioned on [their site](https://jekyllrb.com/)
 
 # Let's go to the changes
 
-## What's wrong with Jekyll?
+### What's wrong with Jekyll?
 
 Nothing! I have no complaints regarding Jekyll as a product.
 But there's something that always annoyed me when using it to view my blog locally: the setup.
@@ -67,10 +66,34 @@ There are some changes that need to be done.
 Fortunately, Hugo even has their on documentation on how to [migrate to Hugo](https://gohugo.io/tools/migrations/).
 
 I have successfully used their [`import` command](https://gohugo.io/commands/hugo_import_jekyll/).
-But before 
-There are significant differences between Jekyll and Hugo:
+Although the command does a really good job, there were at least two things that I needed manually change:
 * Themes: 
-    * I don't know how it's currently done, but when I build my blog with Jekyll, I had to clone a repository that had the theme as a template and then apply the changes. This is not friendly if you want to test different themes - most likely there's other ways to achieve this
-    * With Hugo you add a submodule that's located on the theme's folder, and specify which theme you want to use on the config file
-* File structure:
-    * 
+    * I don't know how it's currently done, but when I built my blog with Jekyll, I had to clone a repository that had the theme as a template and then apply the changes. This is not friendly if you want to test different themes - most likely there's other ways to achieve this
+    * With Hugo you add a submodule or clone the theme into the  themes folder, and specify which theme you want to use on the config file
+* References:
+    * In case you want to reference another post on your blog:
+        * In Jekyll - `[On my last post]({{ site.baseurl }}{% post_url postName %})`
+        * In Hugo - `[On my last post]({{</* ref "/post/postName"*/>}})`
+
+### Showing/Hiding drafts
+
+## Moving from Disqus to GitHub Issues
+This has nothing to do with moving from Jekyll to Hugo. 
+This is another "Since I had an idea I wanted to try that implied changing things" component.
+Disqus is widely used and works just fine, but since I'm already on GitHub ecosystem, might as well leverage it and move the comments to GitHub Issues.
+For my use case it makes sense, since it's a tech/dev blog and I would assume that most of the readers have a GitHub account (I would risk saying that more have GH accounts than Disqus).
+
+I've followed [this post](https://retifrav.github.io/blog/2019/04/19/github-comments-hugo/), which includes everything needed, from the scripts, to the instructions on where should you place those.
+
+Then, because my blog has only a few posts, I took the time to got to the GitHub repo and create an issue for each.
+But Cláudio Silva ([b](https://claudioessilva.eu/)|[t](https://twitter.com/claudioessilva)) recently also revamped his blog and told me about [utterances](https://utteranc.es/), which automatically searchs for GitHub issues for a given blog post and creates a new issue if it doesn't exist.
+
+## Final step: Deploy!
+
+When I was using Jekyll, the action to deploy the website ran automatically whenever I commited to the main branch.
+With Hugo, all I had to do was to add a GitHub Action [as described here](https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action).
+
+# What's for part two?
+
+This first part was more focused on the blog site of my domain. If you've noticed, this blog is hosted on a subdomain of my `danielssilva.dev` domain.
+On the part two I'll show you why I've separated, and how I've achieved it, while keeping both [blog.danielssilva.dev](https://blog.danielssilva.dev) and [danielssilva.dev](https://danielssilva.dev) under the same GitHub user and domain.
