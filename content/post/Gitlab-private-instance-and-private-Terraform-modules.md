@@ -73,14 +73,7 @@ default:
 		- export ARM_SUBSCRIPTION_ID=${ARM_SUBSCRIPTION_ID}
 		- export ARM_TENANT_ID=${ARM_TENANT_ID}
 		- export TF_IN_AUTOMATION=1
-		- terraform init -input=false
-			-upgrade
-			-backend-config="storage_account_name=stgotham${CI_ENVIRONMENT_NAME}"
-			-backend-config="container_name=terraform"
-			-backend-config="key=terraform.tfstate"
-			-backend-config="subscription_id=${ARM_SUBSCRIPTION_ID}"
-			-backend-config="tenant_id=${ARM_TENANT_ID}"
-		- terraform workspace select ${CI_ENVIRONMENT_NAME} || terraform workspace new ${CI_ENVIRONMENT_NAME}
+		...
 ```
 
 
