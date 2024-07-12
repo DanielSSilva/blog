@@ -1,5 +1,5 @@
 ---
-title: "How I've revamped my domain - Part one: From Jekyll to Hugo"
+title: "How I've revamped my domain - From Jekyll to Hugo"
 #title: Taking full advantage of my domain - Personal Page + Blog
 date: "2022-08-04T00:00:00Z"
 tags:
@@ -92,8 +92,3 @@ But Cláudio Silva ([b](https://claudioessilva.eu/)|[t](https://twitter.com/clau
 
 When I was using Jekyll, the action to deploy the website ran automatically whenever I commited to the main branch.
 With Hugo, all I had to do was to add a GitHub Action [as described here](https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action).
-
-# What's for part two?
-
-This first part was more focused on the blog site of my domain. If you've noticed, this blog is hosted on a subdomain of my `danielssilva.dev` domain.
-On the part two I'll show you why I've separated, and how I've achieved it, while keeping both [blog.danielssilva.dev](https://blog.danielssilva.dev) and [danielssilva.dev](https://danielssilva.dev) under the same GitHub user and domain.
