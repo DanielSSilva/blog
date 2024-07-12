@@ -58,18 +58,18 @@ For this part I've followed the guide I've mentioned, but I will outline here wh
 
 1. Head over to the Adafruit IO [website](https://io.adafruit.com/) and create an account if you don't have one yet.
 2. After doing so, head to the "Feeds" section and create a new Feed
-![createFeed](/img/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_create_feed.png)
+![createFeed](/images/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_create_feed.png)
 3. Now create a new Dashboard
-![createDashboard](/img/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_create_dashboard.png)
+![createDashboard](/images/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_create_dashboard.png)
 4. Add a new button
-![createButton](/img/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_create_block.png)
+![createButton](/images/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_create_block.png)
 5. Create a new toggle button and select the feed you've just created. Then press next step and you can leave the default, since we will not use it.
-![createToggleButton](/img/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_create_button_toggle.png)
+![createToggleButton](/images/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_create_button_toggle.png)
 6. Last but not least, you will need an API key. 
 Treat this key like one of your passwords. 
 Don't share this with anyone, or they will have access to your data.
-![AIOKeyButton](/img/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_key_button.png)
-![AIOKey](/img/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_key.png)
+![AIOKeyButton](/images/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_key_button.png)
+![AIOKey](/images/Make-your-ws28xx-LEDs-smarter-by-integrating-them-with-google-assistant/AIO_key.png)
 
 Now let's move the the IFTTT part:
 

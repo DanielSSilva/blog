@@ -76,7 +76,7 @@ dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Coverle
 
 The parameters are pretty self-explanatory: we want to collect code coverage, using cobertura as output format, and we want our results to be inside a _Coverage_ folder inside a _TestResults_ folder.
 
-![](/img/Azure-pipelines---Adding-code-coverage-and-reports-to-the-pipeline/code_coverage.png)
+![](/images/Azure-pipelines---Adding-code-coverage-and-reports-to-the-pipeline/code_coverage.png)
 
 Running this, we get a table output to our terminal and a XML file generated where we specified. This seems promising.
 Now all we have to do is adapt this command to run on our pipeline.
@@ -100,7 +100,7 @@ The final pipeline looks like this:
 
 Now when we run our pipeline and once it finishes, we can see a new tab called "Code Coverage"
 
-![](/img/Azure-pipelines---Adding-code-coverage-and-reports-to-the-pipeline/tests_pipeline.png)
+![](/images/Azure-pipelines---Adding-code-coverage-and-reports-to-the-pipeline/tests_pipeline.png)
 
 This tab shows amazing insights about the code coverage on your project.
 It has a small report with code coverage results such as covered and uncovered lines, branches, etc.
@@ -108,7 +108,7 @@ But, even better, it shows the code coverage on different classes, methods and e
 
 Here's a gif showing you just that (you can also check it yourself by [heading to the results](https://dev.azure.com/danielssilvadev/AzDevOpsSeries/_build/results?buildId=57&view=codecoverage-tab))
 
-![](/img/Azure-pipelines---Adding-code-coverage-and-reports-to-the-pipeline/code_coverage_example.gif)
+![](/images/Azure-pipelines---Adding-code-coverage-and-reports-to-the-pipeline/code_coverage_example.gif)
 
 
 # Important note!

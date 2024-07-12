@@ -54,11 +54,11 @@ The gpio is fairly simple to understand: each pin has a number and a value (it a
 
 To apply what we've just learned, let's do the "hello world" of the hardware: lighting up a LED. There are several types of LEDs, but they usually have one "leg" shorter than the other. The shorter leg is the one that's connected to GROUND (cathode), the other is the one that receives the voltage (anode). If your LED is like mine, they have the same size. Other way to know which is the anode and the cathode is by looking to what's inside the LED. As the following image will show you, you have 2 parts, one bigger than the other.
 
-![redLed](/img/Getting_started_with_PowerShell_Raspberry/red_led.png)
+![redLed](/images/Getting_started_with_PowerShell_Raspberry/red_led.png)
 
 The smaller part is the anode (on the right), and the other is the cathode. With this in mind, we can now try it. To see if your led is working, you can connect it directly to the 5V pin, if it lights up, everything is good, otherwise, make sure you didn't swap the wires.
 
-![setup](/img/Getting_started_with_PowerShell_Raspberry/raspberry_setup.jpg)
+![setup](/images/Getting_started_with_PowerShell_Raspberry/raspberry_setup.jpg)
 
 (My setup, green  connected to cathode (GROUND), grey is connected to anode (3.3V)
 
@@ -82,7 +82,7 @@ Here's the result (it is a video, you have to click on the image):
 This pretty much it. Pretty simple right? Now that you can control the GPIO, spread wings to your imagination and go do awesome stuff! Want a suggestion? What about : _"If the LED is on, send a notification to my machine"_
 
 What's the output? Something like this:
-![notification](/img/Getting_started_with_PowerShell_Raspberry/notification.png)
+![notification](/images/Getting_started_with_PowerShell_Raspberry/notification.png)
 
 Want to know how that can be achieved? I'll leave that to [another post]({{< ref "/post/Remote-Sessions-and-Notifications" >}}).
 

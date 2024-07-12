@@ -14,7 +14,7 @@ GHissueID: 10
 As a first and most broad idea of what a pipeline is, I like to think of it as the filler between developing and delivering your software. A "piece" that aggregates and performs every necessary action/procedure (or at least most of them) to take your code up to the final product (an app, a library, a website, you name it).
 The most amazing part is that it can be as simple as performing a build to ensure that your code compiles, and grow as your needs, ending up being something like:
 
-<div style="text-align:center"><img src="/img/A-journey-through-Azure-Pipelines---Deploy-faster-with-more-quality-and-confidence/pipeline_sequence.jpg" /></div>
+<div style="text-align:center"><img src="/images/A-journey-through-Azure-Pipelines---Deploy-faster-with-more-quality-and-confidence/pipeline_sequence.jpg" /></div>
 
 ## Pipelines have many different uses
 

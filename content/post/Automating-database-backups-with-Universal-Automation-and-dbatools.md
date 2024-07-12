@@ -77,7 +77,7 @@ Let me quickly introduce you some concepts that will be used here:
 
 Once we open the UA, we can create a new script
 
-![new script](/img/Automating_database_backups_with_Universal_Automation_and_dbatools/New_Script.png)
+![new script](/images/Automating_database_backups_with_Universal_Automation_and_dbatools/New_Script.png)
 
 We are asked for some information about the script.
 After filling that, we jump to the script and start editing it.
@@ -97,7 +97,7 @@ Backup-DbaDatabase -IgnoreFileChecks -SqlInstance "192.168.1.80" -SqlCredential 
 
 After saving and running it, there's an error:
 
-![Backup error](/img/Automating_database_backups_with_Universal_Automation_and_dbatools/BackupError.png)
+![Backup error](/images/Automating_database_backups_with_Universal_Automation_and_dbatools/BackupError.png)
 
 Well, of course it is not recognized. This is a [dbatools](https://dbatools.io/) command, and since we are running on a container that does not have dbatools installed by default, we have to install it.
 
@@ -111,7 +111,7 @@ Then, launch PowerShell via terminal (`pwsh`) and do `Install-Module dbatools`.
 
 Running the same script again on UA, it now runs successfully!
 
-![Successful Backup](/img/Automating_database_backups_with_Universal_Automation_and_dbatools/Successful_backup.png)
+![Successful Backup](/images/Automating_database_backups_with_Universal_Automation_and_dbatools/Successful_backup.png)
 
 **Bonus tip** : you can run this "all-in-one" command which will launch Powershell and install dbatools `docker exec -it UA /usr/bin/pwsh -interactive -command Install-Module dbatools` 
 
@@ -121,7 +121,7 @@ Let's consider that this script has to execute every day, twice a day: at 10 am 
 
 Going back to our script, we can find a schedule option inside the 3 dots on the top right.
 
-![Schedule](/img/Automating_database_backups_with_Universal_Automation_and_dbatools/Schedule.png)
+![Schedule](/images/Automating_database_backups_with_Universal_Automation_and_dbatools/Schedule.png)
 
 There are many options baked in it already, such as running every minute, every hour, etc.
 In this case, none of those options match our criteria.
@@ -129,11 +129,11 @@ But there's another tab called CRON.
 That's the one that will be used.
 For that, let's create two schedule entries, like this:
 
-![schedule cron](/img/Automating_database_backups_with_Universal_Automation_and_dbatools/schedule_cron.png)
+![schedule cron](/images/Automating_database_backups_with_Universal_Automation_and_dbatools/schedule_cron.png)
 
 After creating as many schedules as we want, we can see all our schedules by going to the schedules tab.
 
-![schedule list](/img/Automating_database_backups_with_Universal_Automation_and_dbatools/schedule_list.png)
+![schedule list](/images/Automating_database_backups_with_Universal_Automation_and_dbatools/schedule_list.png)
 
 With this, we have our backup script running everyday at 10 am and 6 pm, without us having to remember that we need to execute the script.
 
@@ -143,12 +143,12 @@ You can easily check the jobs that ran (either by schedule or manually), what's 
 
 Here's an example of a script that I've scheduled to run every minute:
 
-![schedule results](/img/Automating_database_backups_with_Universal_Automation_and_dbatools/schedule_sample.png)
+![schedule results](/images/Automating_database_backups_with_Universal_Automation_and_dbatools/schedule_sample.png)
 
 And the results can be seen by clicking on the `view` button.
 The result looks like this:
 
-![job result](/img/Automating_database_backups_with_Universal_Automation_and_dbatools/Job_result.png)
+![job result](/images/Automating_database_backups_with_Universal_Automation_and_dbatools/Job_result.png)
 
 # Bonus - Leveraging the Secrets
 

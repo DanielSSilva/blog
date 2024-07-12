@@ -60,23 +60,23 @@ Turns out that the problem was way simpler to solve and I've found it "randomly"
 
 When I was "playing" with the containers and trying different ways to restore, I suddenly was unable to start a new container because Docker ran out of space.
 
-![out of space](/img/MODIFY_FILE_encountered_operating_system_error_31(A_device_attached_to_the_system_is_not_functioning.)_while_attempting_to_expand_the_physical_file/out_of_space.png)
+![out of space](/images/MODIFY_FILE_encountered_operating_system_error_31(A_device_attached_to_the_system_is_not_functioning.)_while_attempting_to_expand_the_physical_file/out_of_space.png)
 
 Upon running `docker system df` to check what space was being used I saw that my containers were taking TONS of space.
 
-![docker system df](/img/MODIFY_FILE_encountered_operating_system_error_31(A_device_attached_to_the_system_is_not_functioning.)_while_attempting_to_expand_the_physical_file/docker_system_df.png)
+![docker system df](/images/MODIFY_FILE_encountered_operating_system_error_31(A_device_attached_to_the_system_is_not_functioning.)_while_attempting_to_expand_the_physical_file/docker_system_df.png)
 
 I went back to the container where I did the backup from and checked how much space the database I was trying to restore was using.
 
 This was achieved by running `docker exec -it sql19 ls -lh /var/opt/mssql/data`
 
-![database space](/img/MODIFY_FILE_encountered_operating_system_error_31(A_device_attached_to_the_system_is_not_functioning.)_while_attempting_to_expand_the_physical_file/database_space.png)
+![database space](/images/MODIFY_FILE_encountered_operating_system_error_31(A_device_attached_to_the_system_is_not_functioning.)_while_attempting_to_expand_the_physical_file/database_space.png)
 
 Oh wow! I wasn't expecting my dev database to be that large.
 
 So, doing some quick maths, my docker was using around 91GB (6GB+60GB+25GB). This could be confirmed through the Docker app.
 
-![docker app](/img/MODIFY_FILE_encountered_operating_system_error_31(A_device_attached_to_the_system_is_not_functioning.)_while_attempting_to_expand_the_physical_file/docker_app.png)
+![docker app](/images/MODIFY_FILE_encountered_operating_system_error_31(A_device_attached_to_the_system_is_not_functioning.)_while_attempting_to_expand_the_physical_file/docker_app.png)
 
 The Docker has 96GB allocated, but ~91GB is used.
 

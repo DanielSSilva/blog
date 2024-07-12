@@ -88,13 +88,13 @@ Upon creating this file (`defaultHosts.ini` in this case), we can run a simple p
 I won't go into details into the modules section.
 Here's it in action by running `ansible -i defaultHosts.ini defaults -m ping -u daniel`
 
-![ping ansible module](/img/A-very-small-introduction-to-ansible/pingAnsible.png)
+![ping ansible module](/images/A-very-small-introduction-to-ansible/pingAnsible.png)
 
 In this case, we simply sent a ping to all our servers on `defaultHosts.ini` and they all answered with a "pong".
 
 NOTE: In case you misconfigure the ssh passwordless authentication, you will get an error such as this one:
 
-![ssh fail](/img/A-very-small-introduction-to-ansible/ssh_fail.png)
+![ssh fail](/images/A-very-small-introduction-to-ansible/ssh_fail.png)
 
 ## Group hosts by name
 
@@ -179,7 +179,7 @@ Here's how it looks:
 Playbooks can be executed by running `ansible-playbook playbookname.yaml`.
 ALthough, if you go ahead and run this, you will get an error:
 
-![ansible hosts fail](/img/A-very-small-introduction-to-ansible/playbook-host-error.png)
+![ansible hosts fail](/images/A-very-small-introduction-to-ansible/playbook-host-error.png)
 
 This happens because ansible has a configuration file called `ansible.cfg`, which has some default configurations.
 One of such configurations is the location of the inventory (the file where we defined our hosts).
@@ -194,12 +194,12 @@ inventory = hosts.ini
 ```
 
 If we try to run the playbook again:
-![playbook run](/img/A-very-small-introduction-to-ansible/playbookrun.png)
+![playbook run](/images/A-very-small-introduction-to-ansible/playbookrun.png)
 
 Ok so it's all green, seems good!
 Let's make sure that all files have been copied, the "old school" manual way:
 
-![checking playbook result manually](/img/A-very-small-introduction-to-ansible/checking_playbook_result.png)
+![checking playbook result manually](/images/A-very-small-introduction-to-ansible/checking_playbook_result.png)
 
 # Wrapping up
 

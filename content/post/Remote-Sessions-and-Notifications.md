@@ -11,7 +11,7 @@ GHissueID: 2
 
 [On my last post]({{< ref "/post/Getting-Started-with-PowerShell-(Core)-on-Raspbian-(RaspberryPi)">}}), in the very end, I showed you an example of something quite simple that you could do with PowerShell on the RaspberryPi: Show a notification when a LED is left ON.
 
-![](/img/Getting_started_with_PowerShell_Raspberry/notification.png)
+![](/images/Getting_started_with_PowerShell_Raspberry/notification.png)
 
 In this post I will show you how I've managed to display the notification. This will consist of three sections: 
 * How to display a notification
@@ -40,7 +40,7 @@ Send-OSNotification -Title "This is a test" -Body "It has been successfully inst
 ```
 If everyting went smoothly, you should see a notification.
 
-![](/img/RemoteSessions_Notifications/notification_test.png)
+![](/images/RemoteSessions_Notifications/notification_test.png)
 
 # Configure SSH
 Because we will use a PowerShell module to display the notifications, we need to have PowerShell installed on the machine that will do it. Assuming it is already installed, we need to configure the SSH server so that we can use PowerShell to establish remote sessions. What's needed to achieve this can be found [here for Windows](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-6#set-up-on-windows-machine), [here for Linux](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-6#set-up-on-linux-ubuntu-1404-machine) and [here for MacOS](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-6#set-up-on-macos-machine).
@@ -61,7 +61,7 @@ Seems that it allows us to pass an array of sessions and a script block.
 ### The PSSession Parameter
 What can we do with PSSession? `Get-Help *PSSession*` gives us all the cmdlets with PSSession in the name
 
-![](/img/RemoteSessions_Notifications/Get_help_psSession.png)
+![](/images/RemoteSessions_Notifications/Get_help_psSession.png)
 
 {: .box-note}
 **Note:** Notice that in this case I've putted the `PSSession` between `*` so that I catch everything that has the word `PSSession`.
@@ -78,7 +78,7 @@ Invoke-Command -Session $session -ScriptBlock $scriptBlock
 
 If you run this, you should be asked to input your password and after you do that, you should see a list of processes currently running on your machine. We can also see that this worked, because we have a header that is the `PSComputerName` and in this case it is localhost, which matches the session we just created.
 
-![](/img/RemoteSessions_Notifications/get-process_remote.png)
+![](/images/RemoteSessions_Notifications/get-process_remote.png)
 
 This is looking good! We can use remote sessions to execute scripts on another machine.
 
@@ -113,7 +113,7 @@ if((Get-GpioPin -Id 8).Value -eq 'High'){
     Invoke-Command -Session $session -ScriptBlock $scriptBlock
 }
 ```
-![](/img/RemoteSessions_Notifications/final_notification.png)
+![](/images/RemoteSessions_Notifications/final_notification.png)
 
 
 # Wrapping it up

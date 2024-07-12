@@ -88,7 +88,7 @@ I've used [splatting](https://docs.microsoft.com/en-us/powershell/module/microso
 
 Here's the result of that execution:
 
-![import-dbacsv_1stIteration](/img/dbatools-isn-t-just-for-DBAs/import-dbacsv_1stIteration.png)
+![import-dbacsv_1stIteration](/images/dbatools-isn-t-just-for-DBAs/import-dbacsv_1stIteration.png)
 
 Interesting/Relevant points:
 * Notice the `Table` name on the output. As I've said, the table name has the same name as the log file because we haven't specified a table name. 
@@ -96,7 +96,7 @@ Interesting/Relevant points:
 
 Let's take a look at our table, shall we?
 
-![1st-iteration-database](/img/dbatools-isn-t-just-for-DBAs/1st-iteration-database.png)
+![1st-iteration-database](/images/dbatools-isn-t-just-for-DBAs/1st-iteration-database.png)
 
 Well, that's pretty much what was expected at this point. And that's good!
 From now on, we are querying SQL which, for my case and with my experience, is much more powerful in this scenario.
@@ -134,7 +134,7 @@ Import-DbaCsv @paramSplat
 ```
 Notice that I've now removed the `AutoCreateTable` switch and specified the table name instead. This is because I want to append the new results to our existing table.
 
-![manyRowsImport](/img/dbatools-isn-t-just-for-DBAs/manyRowsImport.png)
+![manyRowsImport](/images/dbatools-isn-t-just-for-DBAs/manyRowsImport.png)
 
 Our multiplication generated a file with 8.7MB. Well that's not that big... But it was processed at a rate of 47060 rows per second, still taking less than 1 second 🤯.
 
@@ -147,7 +147,7 @@ Now that gotta be something! PowerShell even took some time to create that file.
 
 How long do you think that it will take (on my machine) to import 2 million records?
 
-![multipliedMultiplied](/img/dbatools-isn-t-just-for-DBAs/multipliedMultiplied.png)
+![multipliedMultiplied](/images/dbatools-isn-t-just-for-DBAs/multipliedMultiplied.png)
 
 39.39 seconds to copy 2.000.400 rows, at a rate of 50785 rows per second. Still pretty amazing if you ask me!
 
@@ -236,7 +236,7 @@ ALTER COLUMN UserIdentity BIGINT
 
 By running this and rerunning the query, we will get the expected result
 
-![averageTime](/img/dbatools-isn-t-just-for-DBAs/averageTime.png)
+![averageTime](/images/dbatools-isn-t-just-for-DBAs/averageTime.png)
 
 # Final example - Or a challenge if you will
 
@@ -288,7 +288,7 @@ DECLARE @totalFriends INT = (
 SELECT 'The request was made by a user named ' + @userName + '. User 3 has ' + CAST(@totalFriends AS nvarchar(10)) + ' friends.'
 ```
 
-![finalQuery](/img/dbatools-isn-t-just-for-DBAs/finalQuery.png)
+![finalQuery](/images/dbatools-isn-t-just-for-DBAs/finalQuery.png)
 
 Although the SQL code seems more verbose, I still consider it to be better, because you can save the query and re-use it whenever necessary, only having to adjust some parameters.
 

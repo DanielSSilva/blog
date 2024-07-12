@@ -143,14 +143,14 @@ But we need to create the pipeline that will run it.
 1. Since I'm using azure Repos on the same project, I'll select that option
 1. Then select the respective repository
 1. And on the "Configure your pipeline", select "Existing Azure Pipelines YAML file"
-![](/img/Azure-pipelines---YAML-structure-and-creating-simple-pipeline-for-Csharp-project/existingYaml.png)
+![](/images/Azure-pipelines---YAML-structure-and-creating-simple-pipeline-for-Csharp-project/existingYaml.png)
 1. Select the branch and path to your YAML file.
 
 Now before saving and running it, remember that I mentioned that we will use the *buildConfiguration* variable? 
 Add it by clicking on *Variables* > New Variable.
 It should look like this.
 
-![](/img/Azure-pipelines---YAML-structure-and-creating-simple-pipeline-for-Csharp-project/buildConfiguration.png)
+![](/images/Azure-pipelines---YAML-structure-and-creating-simple-pipeline-for-Csharp-project/buildConfiguration.png)
 
 We want our pipelines to run with Release by default, so that's the specified value.
 Also make sure to tick the "Let users override this value when running this pipeline" so that you can generate builds with Debug.
@@ -158,7 +158,7 @@ Also make sure to tick the "Let users override this value when running this pipe
 You can now save and run the pipeline.
 
 After running the pipeline, if everything went as expected, you should see something similar to this:
-![](/img/Azure-pipelines---YAML-structure-and-creating-simple-pipeline-for-Csharp-project/pipelineExecution.png)
+![](/images/Azure-pipelines---YAML-structure-and-creating-simple-pipeline-for-Csharp-project/pipelineExecution.png)
 
 Key points:
 * 1 - Here you can see all the jobs that ran and drill down into each job
