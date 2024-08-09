@@ -7,9 +7,9 @@ tags:
 comments: true
 GHissueID: 14
 ---
-There's not a (work) day that goes by where I don't open vscode. I would even say that I spend 80% of my day on that single app. I've been using vscode for the last 7 years, so naturally, I've developed a workflow/muscle memory while using the app.
+There's not a (working) day when I don't open vscode. I would even say I spend 80% of my day on that app. I've been using it for the last 7 years, so naturally, I've developed a workflow/muscle memory while using the app.
 
-Today I want to share with you some of the shortcuts that I use daily that help me be more efficient.
+Today, I want to share with you some of the shortcuts I use daily to be more efficient.
 
 # Before we start
 I'm using MacOS and the US keyboard layout. Although, in most cases, the only difference is using the command key (⌘) instead of alt, some shortcuts will be completely different. I will mark those so that you can compare and adjust.
@@ -27,7 +27,7 @@ But there's something to keep in mind: some of the shortcuts in these cases (lik
 ## Toggle (primary) side bar
 shortcut: ⌘ + B
 
-Let's start simple. This shortcut toggles the display of the primary side panel. If you have the default settings, that's the panel located on the left. This is useful if you need more window space for your code or if you are focused on your code/text and don't need any of the external features.
+Let's start simple. This shortcut toggles the display of the primary side panel. If you have the default settings, that's the panel located on the left. This is useful if you need more window space for your code or are focused on your code/text and don't need any external features.
 ## Toggle the terminal panel
 (This may vary depending on your keyboard layout & environment)
 shortcut: ⌘ + ;
@@ -67,9 +67,9 @@ Mostly in two scenarios:
 ## Format
 Select section + ⌘ + K + ⌘ + F
 
-For this to work, you need to have the correct language mode selected. This is _amazing_ when you are working on long, unformatted files like JSONs.
-I combine this with select all (⌘+A) to format the whole document. So the final combination is ⌘+A + ⌘ + K + ⌘ + F.
-There's a dedicated shortcut to format the whole document (⌥ + ⇧ + F), however it implies knowing (yet) another combination. Due to my muscle memory, I find it easier to use format select selection after selecting everything.
+For this to work, you must select the correct language mode. This is _amazing_ when you are working on long, unformatted files like JSON.
+I combine this with *select all* (⌘+A) to format the whole document. So, the final combination is ⌘+A + ⌘ + K + ⌘ + F.
+There's a dedicated shortcut to format the whole document (⌥ + ⇧ + F). However, it implies knowing (yet) another combination. Due to my muscle memory, I find it easier to use format selection after selecting everything.
 
 ( GIF formatting a JSON file )
 
@@ -82,15 +82,49 @@ Oh the amount of time I spend commenting/uncommenting code because I'm testing s
 
 ## toggle word wrap
 ⌥+Z
-If you are working on a smaller screen, or if your text/code is super long, you'll need to scroll sideways to be able to see the rest of the content. That is unless you toggle wrap mode
+If you are working on a smaller screen, or if your text/code is super long, you'll need to scroll sideways to be able to see the rest of the content. That is unless you toggle wrap mode. Instead of creating a really long line of text, it moves the rest of the content to the following line. This is purely visual and doesn't affect the number of lines on a file
+
+( GIF of toggling word wrap)
 
 ## Multi line cursor select
 ⌘ + ⌥ + ⇧ + direction
 
-### using the mouse 
-⌥ + ⇧ 
+I don't use this one as much as the rest, but when I need to add the same content to multiple lines at the same column position, it does wonders and saves so much time!
+
+To give you a practical example with terraform (don't worry, you don't need to know terraform!): let's say that I have some resources I want to remove from the state. Running `terraform state list` outputs the following list
+```
+random_integer.priority[0]
+random_integer.priority[1]
+random_integer.priority[2]
+random_integer.priority[3]
+random_integer.priority[4]
+random_integer.priority[5]
+random_integer.priority[6]
+random_integer.priority[7]
+random_integer.priority[8]
+random_integer.priority[9]
+```
+
+The syntax to remove a resource from the state is by doing `terraform state rm <name of the resource>
+With this, I can go to the beginning of the list, use the `⌘ + ⌥ + ⇧ + arrow down` and add `terraform state rm`.
+
+
+You can test this with the [terraform_state_sample.txt]() file
+
+(GIF of an example for terraform state rm command)
+
+This is also achievable using the mouse if you prefer by hitting ⌥ + ⇧ + mouse click to place the cursor where desired. But who takes their hands out of the keyboard anyway?!
 
 # Other
 
 ## Open command palette
 ⌘ + ⇧ + P
+
+This can be seen as a "default" go-to whenever I want to run/do something but don't know the shortcut or don't want to click around. My most used case is whenever I want to merge content from a branch into my current working branch. I simply hit ⌘ + ⇧ + P and type merge. Then select the branch, and voilá!
+
+But it's also the place for many other commands, such as the themes, open settings, and whatever commands your extensions support.
+
+
+# Wrap up
+
+Whether you are a new VSCode user or you have been using this for years, I hope that you find any of these commands useful. I know that some of them might be hard to memorize, but the more you start using them, the more natural it becomes. I rely so much on them and muscle memory that there are many times that I want to share some shortcuts with someone, and I completely forget what the correct keys are.
