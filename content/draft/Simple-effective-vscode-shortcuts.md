@@ -109,7 +109,7 @@ The syntax to remove a resource from the state is by doing `terraform state rm <
 With this, I can go to the beginning of the list, use the `⌘ + ⌥ + ⇧ + arrow down` and add `terraform state rm`.
 
 
-You can test this with the [terraform_state_sample.txt]() file
+You can test this with the [terraform_state_sample.txt](https://github.com/DanielSSilva/blog/blob/main/examples/vscode/terraform_state_sample.txt) file
 
 (GIF of an example for terraform state rm command)
 
