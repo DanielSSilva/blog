@@ -28,6 +28,8 @@ But there's something to keep in mind: some of the shortcuts in these cases (lik
 shortcut: ⌘ + B
 
 Let's start simple. This shortcut toggles the display of the primary side panel. If you have the default settings, that's the panel located on the left. This is useful if you need more window space for your code or are focused on your code/text and don't need any external features.
+
+![](/images/Simple-effective-vscode-shortcuts/toggle_primary.gif)
 ## Toggle the terminal panel
 (This may vary depending on your keyboard layout & environment)
 shortcut: ⌘ + ;
@@ -41,10 +43,13 @@ This one is also straightforward. Whenever I'm focused on writing code, I collap
 
 This one is quite universal. However, I use this extensively, especially when I need to do some find/replace/replace all
 
+![](/images/Simple-effective-vscode-shortcuts/search_file.gif)
+
 ## Whole workspace
 ⌘ + ⇧ + F
 
 I usually work with multiple configuration files or even multiple different folders simultaneously. This one brings the search to the next level since it allows you to search the current project/workspace. Again, it's super useful if you need to rename a parameter that you know is being used across multiple files
+
 # Edit the current file
 
 ## Select all
@@ -63,6 +68,11 @@ Mostly in two scenarios:
 - I open a new tab and start working on it right away 
 	- Because I want to have IntelliSense or whatever visual helper it provides
 	- When I copy/paste content on a new tab that is either not recognized, or VSCode assumes the wrong language
+- VSCode doesn't recognize the language of the file you are working on
+
+For this demo, I've purposefuly created a file with a .txt extension, eventhough the content is a JSON. If you open that file, VSCode will not assume it's JSON.
+
+
 
 ## Format
 Select section + ⌘ + K + ⌘ + F
@@ -74,7 +84,7 @@ There's a dedicated shortcut to format the whole document (⌥ + ⇧ + F). Howev
 ( GIF formatting a JSON file )
 
 ## Comment/Uncomment selected section
-⌘ + K + C / ⌘ + K + U
+⌘ + K + ⌘ + C / ⌘ + K + ⌘ + U
 
 Oh the amount of time I spend commenting/uncommenting code because I'm testing something. If your workflow is something like: write code -> test -> comment piece of code -> test -> uncomment and comment other section -> repeat, then these two shortcuts are a must!
 
@@ -87,7 +97,7 @@ If you are working on a smaller screen, or if your text/code is super long, you'
 ( GIF of toggling word wrap)
 
 ## Multi line cursor select
-⌘ + ⌥ + ⇧ + direction
+⌘ + ⌥ + ⇧ + direction (the order before the direction is irrelevant)
 
 I don't use this one as much as the rest, but when I need to add the same content to multiple lines at the same column position, it does wonders and saves so much time!
 
@@ -105,7 +115,7 @@ random_integer.priority[8]
 random_integer.priority[9]
 ```
 
-The syntax to remove a resource from the state is by doing `terraform state rm <name of the resource>
+The syntax to remove a resource from the state is by doing `terraform state rm <name of the resource>`
 With this, I can go to the beginning of the list, use the `⌘ + ⌥ + ⇧ + arrow down` and add `terraform state rm`.
 
 
