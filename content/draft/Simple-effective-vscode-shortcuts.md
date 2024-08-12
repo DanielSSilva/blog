@@ -36,6 +36,7 @@ shortcut: ⌘ + ;
 
 This one is also straightforward. Whenever I'm focused on writing code, I collapse all panels. I toggle the terminal using this shortcut whenever I need to access it. This is nice because I don't need to use the external terminal, so I don't need to leave the current context.
 
+![](/images/Simple-effective-vscode-shortcuts/toggle_terminal.gif)
 # Searching
 
 ## Current file
@@ -49,6 +50,8 @@ This one is quite universal. However, I use this extensively, especially when I 
 ⌘ + ⇧ + F
 
 I usually work with multiple configuration files or even multiple different folders simultaneously. This one brings the search to the next level since it allows you to search the current project/workspace. Again, it's super useful if you need to rename a parameter that you know is being used across multiple files
+
+![](/images/Simple-effective-vscode-shortcuts/search_workspace.gif)
 
 # Edit the current file
 
@@ -72,7 +75,7 @@ Mostly in two scenarios:
 
 For this demo, I've purposefuly created a file with a .txt extension, eventhough the content is a JSON. If you open that file, VSCode will not assume it's JSON.
 
-
+![](/images/Simple-effective-vscode-shortcuts/language_mode.gif)
 
 ## Format
 Select section + ⌘ + K + ⌘ + F
@@ -81,20 +84,20 @@ For this to work, you must select the correct language mode. This is _amazing_ w
 I combine this with *select all* (⌘+A) to format the whole document. So, the final combination is ⌘+A + ⌘ + K + ⌘ + F.
 There's a dedicated shortcut to format the whole document (⌥ + ⇧ + F). However, it implies knowing (yet) another combination. Due to my muscle memory, I find it easier to use format selection after selecting everything.
 
-( GIF formatting a JSON file )
+![](/images/Simple-effective-vscode-shortcuts/format_code.gif)
 
 ## Comment/Uncomment selected section
 ⌘ + K + ⌘ + C / ⌘ + K + ⌘ + U
 
 Oh the amount of time I spend commenting/uncommenting code because I'm testing something. If your workflow is something like: write code -> test -> comment piece of code -> test -> uncomment and comment other section -> repeat, then these two shortcuts are a must!
 
-( GIF of comment/uncomment )
+![](/images/Simple-effective-vscode-shortcuts/comment_uncomment.gif)
 
 ## toggle word wrap
 ⌥+Z
 If you are working on a smaller screen, or if your text/code is super long, you'll need to scroll sideways to be able to see the rest of the content. That is unless you toggle wrap mode. Instead of creating a really long line of text, it moves the rest of the content to the following line. This is purely visual and doesn't affect the number of lines on a file
 
-( GIF of toggling word wrap)
+![](/images/Simple-effective-vscode-shortcuts/word_wrap.gif)
 
 ## Multi line cursor select
 ⌘ + ⌥ + ⇧ + direction (the order before the direction is irrelevant)
@@ -121,9 +124,11 @@ With this, I can go to the beginning of the list, use the `⌘ + ⌥ + ⇧ + arr
 
 You can test this with the [terraform_state_sample.txt](https://github.com/DanielSSilva/blog/blob/main/examples/vscode/terraform_state_sample.txt) file
 
-(GIF of an example for terraform state rm command)
+![](/images/Simple-effective-vscode-shortcuts/multi_line_column.gif)
 
 This is also achievable using the mouse if you prefer by hitting ⌥ + ⇧ + mouse click to place the cursor where desired. But who takes their hands out of the keyboard anyway?!
+
+![](/images/Simple-effective-vscode-shortcuts/multi_line_column_mouse.gif)
 
 # Other
 
@@ -133,6 +138,7 @@ This is also achievable using the mouse if you prefer by hitting ⌥ + ⇧ + mou
 This can be seen as a "default" go-to whenever I want to run/do something but don't know the shortcut or don't want to click around. My most used case is whenever I want to merge content from a branch into my current working branch. I simply hit ⌘ + ⇧ + P and type merge. Then select the branch, and voilá!
 
 But it's also the place for many other commands, such as the themes, open settings, and whatever commands your extensions support.
+
 
 
 # Wrap up
