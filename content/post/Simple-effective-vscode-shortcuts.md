@@ -1,11 +1,11 @@
 ---
 title: "Simple yet effecient VSCode shortcuts for everyday use"
-date: "2024-08-09T00:00:00Z"
+date: "2024-08-23T00:00:00Z"
 tags:
 - vscode
 - devops
 comments: true
-GHissueID: 14
+GHissueID: 15
 ---
 There's not a (working) day when I don't open vscode. I would even say I spend 80% of my day on that app. I've been using it for the last 7 years, so naturally, I've developed a workflow/muscle memory while using the app.
 
