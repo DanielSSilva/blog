@@ -1,5 +1,5 @@
 ---
-title: "Simple yet effecient VSCode shortcuts for everyday use"
+title: "Simple yet efficient VSCode shortcuts for everyday use"
 date: "2024-08-23T00:00:00Z"
 tags:
 - vscode
@@ -29,29 +29,30 @@ shortcut: ⌘ + B
 
 Let's start simple. This shortcut toggles the display of the primary side panel. If you have the default settings, that's the panel located on the left. This is useful if you need more window space for your code or are focused on your code/text and don't need any external features.
 
-![](/images/Simple-effective-vscode-shortcuts/toggle_primary.gif)
+![](/images/Simple-efficient-vscode-shortcuts/toggle_primary.gif)
 ## Toggle the terminal panel
 (This may vary depending on your keyboard layout & environment)
 shortcut: ⌘ + ;
 
 This one is also straightforward. Whenever I'm focused on writing code, I collapse all panels. I toggle the terminal using this shortcut whenever I need to access it. This is nice because I don't need to use the external terminal, so I don't need to leave the current context.
 
-![](/images/Simple-effective-vscode-shortcuts/toggle_terminal.gif)
+![](/images/Simple-efficient-vscode-shortcuts/toggle_terminal.gif)
 # Searching
 
 ## Current file
 ⌘ + F
 
-This one is quite universal. However, I use this extensively, especially when I need to do some find/replace/replace all
+This one is quite universal. However, I use this extensively, especially when I need to do some find/replace/replace all.
+Let's say that you want to rename a variable "name" to "username". Using this shortcut, you can easily find all occurrences of "name" and replace them with "username", as you can see in the following example:
 
-![](/images/Simple-effective-vscode-shortcuts/search_file.gif)
+![](/images/Simple-efficient-vscode-shortcuts/search_file.gif)
 
 ## Whole workspace
 ⌘ + ⇧ + F
 
 I usually work with multiple configuration files or even multiple different folders simultaneously. This one brings the search to the next level since it allows you to search the current project/workspace. Again, it's super useful if you need to rename a parameter that you know is being used across multiple files
 
-![](/images/Simple-effective-vscode-shortcuts/search_workspace.gif)
+![](/images/Simple-efficient-vscode-shortcuts/search_workspace.gif)
 
 # Edit the current file
 
@@ -75,7 +76,7 @@ Mostly in two scenarios:
 
 For this demo, I've purposefuly created a file with a .txt extension, eventhough the content is a JSON. If you open that file, VSCode will not assume it's JSON.
 
-![](/images/Simple-effective-vscode-shortcuts/language_mode.gif)
+![](/images/Simple-efficient-vscode-shortcuts/language_mode.gif)
 
 ## Format
 Select section + ⌘ + K + ⌘ + F
@@ -84,20 +85,20 @@ For this to work, you must select the correct language mode. This is _amazing_ w
 I combine this with *select all* (⌘+A) to format the whole document. So, the final combination is ⌘+A + ⌘ + K + ⌘ + F.
 There's a dedicated shortcut to format the whole document (⌥ + ⇧ + F). However, it implies knowing (yet) another combination. Due to my muscle memory, I find it easier to use format selection after selecting everything.
 
-![](/images/Simple-effective-vscode-shortcuts/format_code.gif)
+![](/images/Simple-efficient-vscode-shortcuts/format_code.gif)
 
 ## Comment/Uncomment selected section
 ⌘ + K + ⌘ + C / ⌘ + K + ⌘ + U
 
 Oh the amount of time I spend commenting/uncommenting code because I'm testing something. If your workflow is something like: write code -> test -> comment piece of code -> test -> uncomment and comment other section -> repeat, then these two shortcuts are a must!
 
-![](/images/Simple-effective-vscode-shortcuts/comment_uncomment.gif)
+![](/images/Simple-efficient-vscode-shortcuts/comment_uncomment.gif)
 
 ## toggle word wrap
 ⌥+Z
 If you are working on a smaller screen, or if your text/code is super long, you'll need to scroll sideways to be able to see the rest of the content. That is unless you toggle wrap mode. Instead of creating a really long line of text, it moves the rest of the content to the following line. This is purely visual and doesn't affect the number of lines on a file
 
-![](/images/Simple-effective-vscode-shortcuts/word_wrap.gif)
+![](/images/Simple-efficient-vscode-shortcuts/word_wrap.gif)
 
 ## Multi line cursor select
 ⌘ + ⌥ + ⇧ + direction (the order before the direction is irrelevant)
@@ -124,11 +125,11 @@ With this, I can go to the beginning of the list, use the `⌘ + ⌥ + ⇧ + arr
 
 You can test this with the [terraform_state_sample.txt](https://github.com/DanielSSilva/blog/blob/main/examples/vscode/terraform_state_sample.txt) file
 
-![](/images/Simple-effective-vscode-shortcuts/multi_line_column.gif)
+![](/images/Simple-efficient-vscode-shortcuts/multi_line_column.gif)
 
 This is also achievable using the mouse if you prefer by hitting ⌥ + ⇧ + mouse click to place the cursor where desired. But who takes their hands out of the keyboard anyway?!
 
-![](/images/Simple-effective-vscode-shortcuts/multi_line_column_mouse.gif)
+![](/images/Simple-efficient-vscode-shortcuts/multi_line_column_mouse.gif)
 
 # Other
 
