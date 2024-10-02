@@ -50,7 +50,7 @@ The key part here is the `Resource` section:
 </a>
 
 - **Connection Method**: Select the “_Connect to an Azure resource by resource ID or alias._”.
-- **resourceID or alias:** You need to have the _resourceID_ of the resource you want to link to the private endpoint. In this case, it is the ResourceID of the storage account. It looks like this: `/subscriptions/<subscriptionID>/resourceGroups/<target resource group>/providers/Microsoft.Storage/storageAccounts/<target storage>`
+- **ResourceID or alias:** You need to have the _resourceID_ of the resource you want to link to the private endpoint. In this case, it is the ResourceID of the storage account. It looks like this: `/subscriptions/<subscriptionID>/resourceGroups/<target resource group>/providers/Microsoft.Storage/storageAccounts/<target storage>`
 - **Target sub-resource:** This will depend on what you want to connect to. In this case, it is the blob service.
 - **Request message**: This will be visible in the Storage Account connections. Consider including information that helps the owner know that you are the owner of this private endpoint.
 
