@@ -1,6 +1,21 @@
 <!doctype html><html lang=en-us><head><title>Using RaspberryPi as an Azure agent for Pipelines (Part 2) | Daniel Silva's blog</title>
-<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="In the first part of this series, we have seen how we can setup a self hosted agent (in this case on a Raspberry Pi). To recap, here&rsquo;s a quick list of things required to do on the target host (this is agnostic to the underlying operating system):
-Get the latest agent version available (head to the Azure DevOps website > Project settings > Agent Pools > your pool > new agent > download agent) Extract the file Run the config file and specify: Server URL Your PAT Agent pool Agent name Work folder Run the run file or configure as a service."><meta name=generator content="Hugo 0.133.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon></head><body><nav class=navigation><a href=/><span class=arrow>←</span>Home</a>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="In the first part of this series, we have seen how we can setup a self hosted agent (in this case on a Raspberry Pi).
+To recap, here&rsquo;s a quick list of things required to do on the target host (this is agnostic to the underlying operating system):
+
+Get the latest agent version available (head to the Azure DevOps website > Project settings > Agent Pools > your pool > new agent > download agent)
+Extract the file
+Run the config file and specify:
+
+Server URL
+Your PAT
+Agent pool
+Agent name
+Work folder
+
+
+Run the run file or configure as a service.
+
+This is fine and easy enough, if you are targeting just one host."><meta name=generator content="Hugo 0.135.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon></head><body><nav class=navigation><a href=/><span class=arrow>←</span>Home</a>
 <a href=/posts>Archive</a>
 <a href=/tags>Tags</a>
 <a href=/about>About</a></nav><main class=main><section id=single><h1 class=title>Using RaspberryPi as an Azure agent for Pipelines (Part 2)</h1><div class=tip><time datetime="2020-11-13 00:00:00 +0000 UTC">Nov 13, 2020</time>
