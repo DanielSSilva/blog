@@ -68,7 +68,7 @@ The final step is to approve the private endpoint connection in the Storage acco
 
 If you are the storage account owner and the user didn't provide a useful description or want to add any details, you can do so before approving.
 
-# The IaC way
+# The Infrastructure as Code (IaC) way
 Creating it through IaC is pretty straightforward since we are always required to provide the ResourceID. The following Terraform snippet translates to the same as the previous example.
 ``` hcl 
 resource "azurerm_private_endpoint" "blob_storage_pe" {
