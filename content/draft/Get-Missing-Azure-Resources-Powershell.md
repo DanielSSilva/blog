@@ -11,9 +11,10 @@ GHissueID: 16
 
 I've recently stumbled across a situation where some resource groups were missing a given type of resource. 
 The "normal" scenario is that each resource group has a bunch of resources, and this happens for multiple resource groups owned by my team.
+
 There were some issues with some implementations, and there was no logic on why some resource groups had the resource and others didn't. Since we are talking about hundreds of resource groups, checking one by one is out of question.
 
-Instead, I quickly fired up my vscode and wrote a quick script to check which resource groups were missing the resource.
+Instead, I quickly fired up my vscode and wrote a quick script to get me the resource groups that were missing the resource.
 
 The reason why I'm sharing this, is because I think it's a good example of how PowerShell can be really powerful and save a lot of time on some simple tasks that would be very time consuming otherwise.
 
@@ -38,8 +39,10 @@ $rgs | Select-Object -ExpandProperty ResourceGroupName | ForEach-Object {
     }
 }
 ```
-This first approach works, but it's not the most efficient. I'm loading _all_ the resource groups that I have access to, and only then filtering by the ones that match my team. 
-But the `Get-AzResourceGroup` has a `-Tag` parameter that allows me to filter directly on the query. This way, I only get the resource groups that match my criteria.
+This first approach works, but it's not the most efficient. I'm getting _all_ the resource groups that I have access to, and only then filtering by the ones that match my team. 
+But the `Get-AzResourceGroup` has a `-Tag` parameter that allows me to filter directly on the query. 
+
+This way, I only get the resource groups that match my criteria.
 
 ## 2nd approach
 
@@ -55,7 +58,10 @@ $rgs | Select-Object -ExpandProperty ResourceGroupName | ForEach-Object {
 ```
 
 This small change, although it seems insignificant, can make a huge difference in performance in cases where you have to hundreds of resource groups, because you are now filtering directly on the query, instead of filtering it locally.
-But there's still room for improvement in this case, similar to what we've just did. Can you spot it?
+But there's still room for improvement in this case, similar to what we've just did. 
+
+### Can you spot it?
+
 The `Get-AzResource` cmdlet is returning all resources for a given resource group and adding them to a list. Not only that, but we are afterwards doing a `Contains`, which will have to iterate the list just to find if a value exists.
 But we are only interested in a specific type. I could change the `Select-Object -ExpandProperty ResourceType` to only get the `ResourceType` property, but that would still return all resources, and we would have to iterate them to find the one we are looking for.
 
