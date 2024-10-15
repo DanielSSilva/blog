@@ -14,7 +14,7 @@ The "normal" scenario is that each resource group has a bunch of resources, and 
 
 There were some issues with some implementations, and there was no logic on why some resource groups had the resource and others didn't. Since we are talking about hundreds of resource groups, checking one by one is out of question.
 
-Instead, I quickly fired up my vscode and wrote a quick script to get me the resource groups that were missing the resource.
+Instead, I quickly fired up my vscode and wrote a script to get me the resource groups that were missing the resource.
 
 The reason why I'm sharing this, is because I think it's a good example of how PowerShell can be really powerful and save a lot of time on some simple tasks that would be very time consuming otherwise.
 
